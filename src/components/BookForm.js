@@ -1,14 +1,17 @@
+// src/components/BookForm.js
+import '../styles/bookform.css'
+
 import { useState } from "react";
 
 export default function BookForm({ onCreate }) {
-    const [title, setTitle] = useState('');
-    const [author, setAuthor] = useState('');
+    const [title, setTitle] = useState("");
+    const [author, setAuthor] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
         onCreate(title, author);
-        setTitle('');
-        setAuthor('');
+        setTitle("");
+        setAuthor("");
     };
 
     const handleTitleChange = (event) => {
@@ -20,12 +23,14 @@ export default function BookForm({ onCreate }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="input-book" onSubmit={handleSubmit}>
+            <p className='add-book'>Add a new Book</p>
             <input
                 type="text"
                 value={title}
                 onChange={handleTitleChange}
                 placeholder="Enter book title here"
+                className='title-input'
             />
             <input
                 type="text"
@@ -33,7 +38,7 @@ export default function BookForm({ onCreate }) {
                 onChange={handleAuthorChange}
                 placeholder="Enter book author here"
             />
-            <button type="submit">Create</button>
+            <button className='submit-button' type="submit">Add book</button>
         </form>
     )
 }
