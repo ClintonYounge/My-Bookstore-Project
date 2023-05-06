@@ -1,0 +1,42 @@
+* {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  border-bottom: 0.1px solid grey;
+  background-color: white;
+  margin-bottom: 25px;
+}
+
+nav {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.head {
+  font-size: 40px;
+  margin-left: -40px;
+}
+
+.route {
+  margin-top: 10px;
+}
+
+.user-image {
+  position: absolute;
+  right: 7.5%;
+  width: 20px;
+  margin-top: 8px;
+}
