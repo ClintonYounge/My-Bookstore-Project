@@ -1,5 +1,6 @@
 // src/components/BookForm.js
 import '../styles/bookform.css';
+import PropTypes from 'prop-types';
 
 import { useState } from 'react';
 
@@ -42,3 +43,7 @@ export default function BookForm({ onCreate }) {
     </form>
   );
 }
+
+BookForm.propTypes = {
+  onCreate: PropTypes.func.isRequired,
+};

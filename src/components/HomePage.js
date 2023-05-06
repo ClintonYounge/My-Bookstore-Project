@@ -9,6 +9,8 @@ import BookForm from './BookForm';
 export default function Book() {
   const [books, setBooks] = useState([]);
 
+  const filterBooksById = (books, id) => books.filter((book) => book.id !== id);
+
   const handleDelete = (id) => {
     const filteredBooks = filterBooksById(books, id);
     setBooks(filteredBooks);
@@ -18,8 +20,6 @@ export default function Book() {
     const newBook = { id: books.length, title, author };
     setBooks([...books, newBook]);
   };
-
-  const filterBooksById = (books, id) => books.filter((book) => book.id !== id);
 
   return (
     <div className="main-container">
