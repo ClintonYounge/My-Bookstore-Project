@@ -3,16 +3,16 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import CategoriesPage from './components/CategoriesPage';
-import HomePage from './components/HomePage'
+import HomePage from './components/HomePage';
 
 function App() {
   return (
-      <>
-        <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/categories' element={<CategoriesPage />} />
-        </Routes>
-      </>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+      </Routes>
+    </>
   );
 }
 

@@ -1,35 +1,42 @@
 // src/components/Booklist.js
-import '../styles/booklist.css'
+import '../styles/booklist.css';
 import progressImg from '../images/progress-circle.png';
 
 export default function BookList({ books, onDelete }) {
-    const renderBook = (book) => (
-      <div className='book-card'>
-        <li key={book.id} className='book'>
-          <span className='book-info'>
-            {book.title}<br />
-            <span className='author'>{book.author}{" "}</span>
+  const renderBook = (book) => (
+    <div className="book-card">
+      <li key={book.id} className="book">
+        <span className="book-info">
+          {book.title}
+          <br />
+          <span className="author">
+            {book.author}
+            {' '}
           </span>
-          <ul className='functionality'>
-            <li className='separator'>Comment</li>
-            <li className='separator delete-book' onClick={() => onDelete(book.id)}>Remove</li>
-            <li>Edit</li>
-            <img  className='progress-img' src={progressImg} alt="" />
-          </ul>
-        </li>
-        <ul className='right-content'>
-          <li className='progress-stat'>Y% <br />Completed</li>
-          <ul>
-            <li>Current Chapter</li>
-            <li>Chapter X: Lorem ipsum</li>
-            <li className='up-progress'>Update Progress</li>
-          </ul>
+        </span>
+        <ul className="functionality">
+          <li className="separator">Comment</li>
+          <li className="separator delete-book" onClick={() => onDelete(book.id)}>Remove</li>
+          <li>Edit</li>
+          <img className="progress-img" src={progressImg} alt="" />
         </ul>
-      </div>
-    );
-  
-    const renderNoBooksMessage = () => <li className='no-books'>Added books will be displayed here.</li>;
-  
-    return <ul className='book-list'>{books.length > 0 ? books.map(renderBook) : renderNoBooksMessage()}</ul>;
+      </li>
+      <ul className="right-content">
+        <li className="progress-stat">
+          Y%
+          <br />
+          Completed
+        </li>
+        <ul>
+          <li>Current Chapter</li>
+          <li>Chapter X: Lorem ipsum</li>
+          <li className="up-progress">Update Progress</li>
+        </ul>
+      </ul>
+    </div>
+  );
+
+  const renderNoBooksMessage = () => <li className="no-books">Added books will be displayed here.</li>;
+
+  return <ul className="book-list">{books.length > 0 ? books.map(renderBook) : renderNoBooksMessage()}</ul>;
 }
-  
