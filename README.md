@@ -49,11 +49,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[Add books]**
-- **[Display books]**
-- **[Remove books]**
+- Contains individual book state, as well as a button to delete the book
+- Contains a list to renders individual books
+- Contains a form to create new books
+- Contains a navigation to link to the 2 routes you created
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
