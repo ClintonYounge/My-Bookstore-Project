@@ -18,7 +18,7 @@ export default function BookList({ books, onDelete }) {
         </span>
         <ul className="functionality">
           <li className="separator">Comment</li>
-          <button type="button" className="separator delete-book" onClick={() => onDelete(book.id)}>Remove</button>
+          <li className="separator delete-book"><button type="button" onClick={() => onDelete(book.id)}>Remove</button></li>
           <li>Edit</li>
           <img className="progress-img" src={progressImg} alt="" />
         </ul>

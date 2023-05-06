@@ -1,4 +1,4 @@
-* .no-books {
+.no-books {
   font-size: 30px;
   height: 70px;
   font-style: italic;
@@ -6,12 +6,13 @@
 
 .book-card {
   display: flex;
+  background-color: whitesmoke;
+  margin-left: -20px;
 }
 
 .book-list {
-  margin: auto;
   width: 90%;
-  margin-left: -20px;
+  margin: auto;
   border-bottom: 1px solid grey;
 }
 
@@ -23,7 +24,6 @@
   border: 1px solid grey;
   margin-bottom: 25px;
   border-radius: 10px;
-  margin-left: -10px;
   font-size: 25px;
   padding-top: 1%;
 }
