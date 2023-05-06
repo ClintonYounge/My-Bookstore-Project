@@ -1,7 +1,6 @@
 // src/components/HomePage.js
 import '../styles/HomePage.css';
 import { useState } from 'react';
-import Header from './Header';
 
 import Booklist from './Booklist';
 import BookForm from './BookForm';
@@ -23,7 +22,6 @@ export default function Book() {
 
   return (
     <div className="main-container">
-      <Header />
       <Booklist books={books} onDelete={handleDelete} />
       <BookForm onCreate={handleCreate} />
     </div>
