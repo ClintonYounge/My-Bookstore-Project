@@ -1,3 +1,5 @@
+// src/components/Header.js
+
 import { Link } from 'react-router-dom';
 import '../styles/header.css';
 import image from '../images/user-solid.png';

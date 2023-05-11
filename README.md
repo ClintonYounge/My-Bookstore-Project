@@ -53,6 +53,7 @@
 - Contains a list to renders individual books
 - Contains a form to create new books
 - Contains a navigation to link to the 2 routes you created
+- Contains a redux directory with reducers and actions.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -101,6 +102,7 @@ Run the `npm install` command in your console to install all necessary dependenc
 -**[Improved User Interface]**
 -**[Improved functionality]**
 -**[Better UX]**
+-**[Redux]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
