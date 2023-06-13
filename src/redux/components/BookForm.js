@@ -38,17 +38,19 @@ export default function BookForm() {
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
-      <select value={category}>
+
+      <select placeholder="Category" onChange={(e) => setCategory(e.target.value)}>
         <option>
-          select category
+          Select Category
         </option>
         <option value="Fiction" onClick={(e) => setCategory(e.target.value)}>
           Fiction
         </option>
-        <option value="Fiction" onClick={(e) => setCategory(e.target.value)}>
-          NonFiction
+        <option value="Non Fiction" onClick={(e) => setCategory(e.target.value)}>
+          Non Fiction
         </option>
       </select>
+
       <button
         aria-label="add-btn"
         type="button"

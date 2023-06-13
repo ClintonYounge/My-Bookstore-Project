@@ -19,7 +19,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome Book] <a name="about-project"></a>
+# 📖 [My Bookstore Project] <a name="about-project"></a>
 
 
 **[My Bookstore Project]** is a react.js project which allows users to add and remove books from a list by interacting.
@@ -33,10 +33,9 @@
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
-</details>
-
-<details>
-  <summary>Front-End</summary>
+  <ul>
+    <li><a href="https://redux.js.org/">Redux.js</a></li>
+  </ul>
   <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
   </ul>
@@ -52,8 +51,8 @@
 - Contains individual book state, as well as a button to delete the book
 - Contains a list to renders individual books
 - Contains a form to create new books
-- Contains a navigation to link to the 2 routes you created
-- Contains a redux directory with reducers and actions.
+- Contains a navigation to link to the 2 routes created
+- Contains a redux directory with componenets and feature to recreate initial functionality with redux store.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,10 +98,8 @@ Run the `npm install` command in your console to install all necessary dependenc
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--**[Improved User Interface]**
--**[Improved functionality]**
+-**[Styled User Interface]**
 -**[Better UX]**
--**[Redux]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
