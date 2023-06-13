@@ -1,49 +1,64 @@
-// src/components/BookForm.js
-import '../styles/bookform.css';
-import PropTypes from 'prop-types';
-
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/booksSlice';
 
-export default function BookForm({ onCreate }) {
+export default function BookForm() {
+  const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('Uncategorized');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onCreate(title, author);
+  const handleAddBook = () => {
+    const newBook = {
+      itemId: uuidv4(),
+      title,
+      author,
+      category,
+    };
+    dispatch(addBook(newBook));
+
+    // Reset input fields after adding the book
     setTitle('');
     setAuthor('');
-  };
-
-  const handleTitleChange = (event) => {
-    setTitle(event.target.value);
-  };
-
-  const handleAuthorChange = (event) => {
-    setAuthor(event.target.value);
+    setCategory('Uncategorized');
   };
 
   return (
-    <form className="input-book" onSubmit={handleSubmit}>
-      <p className="add-book">Add a new Book</p>
+    <div className="book-form">
       <input
         type="text"
+        placeholder="Title"
         value={title}
-        onChange={handleTitleChange}
-        placeholder="Enter book title here"
-        className="title-input"
+        onChange={(e) => setTitle(e.target.value)}
       />
       <input
         type="text"
+        placeholder="Author"
         value={author}
-        onChange={handleAuthorChange}
-        placeholder="Enter book author here"
+        onChange={(e) => setAuthor(e.target.value)}
       />
-      <button className="submit-button" type="submit">Add book</button>
-    </form>
+
+      <select placeholder="Category" onChange={(e) => setCategory(e.target.value)}>
+        <option>
+          Select Category
+        </option>
+        <option value="Fiction" onClick={(e) => setCategory(e.target.value)}>
+          Fiction
+        </option>
+        <option value="Non Fiction" onClick={(e) => setCategory(e.target.value)}>
+          Non Fiction
+        </option>
+      </select>
+
+      <button
+        aria-label="add-btn"
+        type="button"
+        className="add-btn"
+        onClick={handleAddBook}
+      >
+        Add Book
+      </button>
+    </div>
   );
 }
-
-BookForm.propTypes = {
-  onCreate: PropTypes.func.isRequired,
-};

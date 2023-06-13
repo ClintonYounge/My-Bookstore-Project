@@ -2,7 +2,7 @@
 
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../books/booksSlice';
+import { removeBook } from '../redux/books/booksSlice';
 
 export default function Books({
   itemId,
