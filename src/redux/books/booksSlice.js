@@ -1,6 +1,3 @@
-// src/redux/books/bookSlice.js
-
-/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 import initialBooks from '../../initialBooks';
 
