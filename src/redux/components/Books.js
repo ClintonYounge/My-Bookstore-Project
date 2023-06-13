@@ -1,3 +1,5 @@
+// src/redux/components/Book.js
+
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../books/booksSlice';

@@ -1,4 +1,4 @@
-// src. App.js
+// src/App.js
 
 import './App.css';
 import BookContainer from './redux/components/BookContainer';

@@ -1,6 +1,9 @@
+// src/redux/components/BookContainer.js
+
 /* eslint-disable arrow-body-style */
 import { useSelector } from 'react-redux';
 import Books from './Books';
+import BookForm from './BookForm';
 
 export default function BookContainer() {
   const books = useSelector((state) => state.books);
@@ -17,6 +20,7 @@ export default function BookContainer() {
           />
         );
       })}
+      <BookForm />
     </section>
   );
 }
