@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../books/booksSlice';
 
 export default function BookForm() {
@@ -9,7 +10,7 @@ export default function BookForm() {
 
   const handleAddBook = () => {
     const newBook = {
-      itemId: 'id generator to be implemented',
+      itemId: uuidv4(),
       title,
       author,
     };
