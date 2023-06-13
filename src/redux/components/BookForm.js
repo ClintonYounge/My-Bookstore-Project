@@ -7,7 +7,7 @@ export default function BookForm() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('Uncategorized');
 
   const handleAddBook = () => {
     const newBook = {
@@ -21,7 +21,7 @@ export default function BookForm() {
     // Reset input fields after adding the book
     setTitle('');
     setAuthor('');
-    setCategory('');
+    setCategory('Uncategorized');
   };
 
   return (
@@ -38,11 +38,14 @@ export default function BookForm() {
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
-      <select placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)}>
+      <select value={category}>
         <option>
+          select category
+        </option>
+        <option value="Fiction" onClick={(e) => setCategory(e.target.value)}>
           Fiction
         </option>
-        <option>
+        <option value="Fiction" onClick={(e) => setCategory(e.target.value)}>
           NonFiction
         </option>
       </select>
