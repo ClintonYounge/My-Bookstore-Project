@@ -1,17 +1,15 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
+import initialBooks from '../../initialBooks';
 
 const booksSlice = createSlice({
   name: 'books',
-  initialState: { books: [] },
+  initialState: initialBooks,
   reducers: {
-    addBook: (state, action) => ({
-      ...state,
-      books: [...state.books, action.payload],
-    }),
-    removeBook: (state, action) => ({
-      ...state,
-      books: state.books.filter((book) => book.id !== action.payload),
-    }),
+    removeBook: (state, action) => {
+      const bookId = action.payload;
+      return state.filter((book) => book.itemId !== bookId);
+    },
   },
 });
 
