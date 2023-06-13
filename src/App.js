@@ -1,21 +1,20 @@
 // src/App.js
 
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
 import BookContainer from './redux/components/BookContainer';
-// import { Route, Routes } from 'react-router-dom';
-// import CategoriesPage from './components/CategoriesPage';
+import CategoriesPage from './components/CategoriesPage';
 // import HomePage from './components/HomePage';
-// import Header from './components/Header';
+import Header from './components/Header';
 
 function App() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<BookContainer />} />
         <Route path="/categories" element={<CategoriesPage />} />
-      </Routes> */}
-      <BookContainer />
+      </Routes>
     </>
   );
 }

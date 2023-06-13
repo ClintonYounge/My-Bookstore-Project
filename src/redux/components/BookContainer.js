@@ -17,6 +17,7 @@ export default function BookContainer() {
             itemId={book.itemId}
             title={book.title}
             author={book.author}
+            category={book.category}
           />
         );
       })}

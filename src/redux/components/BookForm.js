@@ -7,18 +7,21 @@ export default function BookForm() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const handleAddBook = () => {
     const newBook = {
       itemId: uuidv4(),
       title,
       author,
+      category,
     };
     dispatch(addBook(newBook));
 
     // Reset input fields after adding the book
     setTitle('');
     setAuthor('');
+    setCategory('');
   };
 
   return (
@@ -34,6 +37,12 @@ export default function BookForm() {
         placeholder="Author"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Category"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
       />
       <button
         aria-label="add-btn"
