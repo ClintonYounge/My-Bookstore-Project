@@ -27,7 +27,7 @@ export default function BookContainer() {
   return (
     <section className="books">
       {Object.keys(books).map((bookId) => {
-        const book = books[bookId][0]; // Assuming each book ID has only one book object
+        const book = books[bookId][0];
         return (
           <Books
             key={bookId}

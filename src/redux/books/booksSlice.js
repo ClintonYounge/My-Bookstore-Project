@@ -1,4 +1,4 @@
-// src/redux/books/booksSlive.js
+// // src/redux/books/booksSlice.js
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
@@ -25,15 +25,16 @@ export const addNewBook = createAsyncThunk('books/addNewBook', async (newBook) =
   }
 });
 
+export const deleteBook = createAsyncThunk('books/deleteBook', async (bookId) => {
+  const deleteUrl = `${url}/${bookId}`;
+  await axios.delete(deleteUrl);
+  return bookId;
+});
+
 const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    removeBook: (state, action) => {
-      const bookId = action.payload;
-      return state.filter((book) => book.itemId !== bookId);
-    },
-  },
+  reducers: {},
   extraReducers(builder) {
     builder
       .addCase(fetchBooks.pending, (state) => ({
@@ -49,9 +50,39 @@ const booksSlice = createSlice({
         ...state,
         isLoading: false,
         error: true,
+      }))
+
+      .addCase(addNewBook.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(addNewBook.fulfilled, (state) => ({
+        ...state,
+        isLoading: false,
+      }))
+      .addCase(addNewBook.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+        error: true,
+      }))
+
+      .addCase(deleteBook.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(deleteBook.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        books: Object.fromEntries(
+          Object.entries(state.books).filter(([itemId]) => itemId !== action.payload),
+        ),
+      }))
+      .addCase(deleteBook.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+        error: true,
       }));
   },
-
 });
 
 export const { addBook, removeBook } = booksSlice.actions;
