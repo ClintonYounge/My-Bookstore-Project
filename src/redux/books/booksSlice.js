@@ -1,6 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import initialBooks from '../../initialBooks';
 import axios from 'axios';
+
+const initialState = {
+  books: [],
+  isLoading: false,
+  error: undefined,
+};
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/hK5bVdhKIYawlUH0NiMI/books';
 
@@ -11,7 +16,7 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
 
 const booksSlice = createSlice({
   name: 'books',
-  initialState: initialBooks,
+  initialState,
   reducers: {
     addBook: (state, action) => {
       const newBook = action.payload;
@@ -22,6 +27,24 @@ const booksSlice = createSlice({
       return state.filter((book) => book.itemId !== bookId);
     },
   },
+  extraReducers(builder) {
+    builder
+      .addCase(fetchBooks.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(fetchBooks.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        books: action.payload,
+      }))
+      .addCase(fetchBooks.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+        error: true,
+      }));
+  },
+
 });
 
 export const { addBook, removeBook } = booksSlice.actions;
