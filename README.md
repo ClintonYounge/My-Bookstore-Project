@@ -42,17 +42,23 @@
   <ul>
     <li><a href="https://www.javascript.com/">JavaScript</a></li>
   </ul>
-  
+</details>
+<details>
+  <summary>API USED</summary>
+  <ul>
+    <li><a href="https://microverse.notion.site/Bookstore-API-51ea269061f849118c65c0a53e88a739">Bookstore API</a></li>
+  </ul>
 </details>
 
 
 ### Key Features <a name="key-features"></a>
 
-- Contains individual book state, as well as a button to delete the book
-- Contains a list to renders individual books
-- Contains a form to create new books
+- Contains a form to create new books that's posted to an API.
 - Contains a navigation to link to the 2 routes created
 - Contains a redux directory with componenets and feature to recreate initial functionality with redux store.
+- Fetch and Render books from API
+- Add book to API functionality.
+- Remove book from API functionality.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

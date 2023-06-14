@@ -2,7 +2,7 @@
 
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook } from '../redux/books/booksSlice';
 
 export default function Books({
   itemId,
@@ -23,7 +23,7 @@ export default function Books({
           aria-label="remove-btn"
           type="button"
           className="remove-btn"
-          onClick={() => dispatch(removeBook(itemId))}
+          onClick={() => dispatch(deleteBook(itemId))}
         >
           Remove
         </button>
