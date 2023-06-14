@@ -51,21 +51,6 @@ const booksSlice = createSlice({
         isLoading: false,
         error: true,
       }))
-
-      .addCase(addNewBook.pending, (state) => ({
-        ...state,
-        isLoading: true,
-      }))
-      .addCase(addNewBook.fulfilled, (state) => ({
-        ...state,
-        isLoading: false,
-      }))
-      .addCase(addNewBook.rejected, (state) => ({
-        ...state,
-        isLoading: false,
-        error: true,
-      }))
-
       .addCase(deleteBook.pending, (state) => ({
         ...state,
         isLoading: true,

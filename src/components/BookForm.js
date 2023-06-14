@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addNewBook } from '../redux/books/booksSlice';
+import { addNewBook, fetchBooks } from '../redux/books/booksSlice';
 
 export default function BookForm() {
   const dispatch = useDispatch();
@@ -19,6 +19,9 @@ export default function BookForm() {
       category,
     };
     dispatch(addNewBook(newBook));
+    setTimeout(() => {
+      dispatch(fetchBooks());
+    }, 500);
 
     // Reset input fields after adding the book
     setTitle('');
