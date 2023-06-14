@@ -1,5 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import initialBooks from '../../initialBooks';
+import axios from 'axios';
+
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/hK5bVdhKIYawlUH0NiMI/books';
+
+export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
+  const response = await axios.get(url);
+  return response.data;
+});
 
 const booksSlice = createSlice({
   name: 'books',
