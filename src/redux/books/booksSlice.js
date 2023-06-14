@@ -1,3 +1,5 @@
+// src/redux/books/booksSlive.js
+
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -14,14 +16,19 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   return response.data;
 });
 
+export const addNewBook = createAsyncThunk('books/addNewBook', async (newBook) => {
+  try {
+    const response = await axios.post(url, newBook);
+    return response.data;
+  } catch (error) {
+    throw new Error('Failed to add a new book');
+  }
+});
+
 const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    addBook: (state, action) => {
-      const newBook = action.payload;
-      state.push(newBook);
-    },
     removeBook: (state, action) => {
       const bookId = action.payload;
       return state.filter((book) => book.itemId !== bookId);

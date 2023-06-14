@@ -1,7 +1,9 @@
+// src/components/BookForm.js
+
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/booksSlice';
+import { addNewBook } from '../redux/books/booksSlice';
 
 export default function BookForm() {
   const dispatch = useDispatch();
@@ -11,12 +13,12 @@ export default function BookForm() {
 
   const handleAddBook = () => {
     const newBook = {
-      itemId: uuidv4(),
+      item_id: uuidv4(),
       title,
       author,
       category,
     };
-    dispatch(addBook(newBook));
+    dispatch(addNewBook(newBook));
 
     // Reset input fields after adding the book
     setTitle('');
@@ -39,16 +41,10 @@ export default function BookForm() {
         onChange={(e) => setAuthor(e.target.value)}
       />
 
-      <select placeholder="Category" onChange={(e) => setCategory(e.target.value)}>
-        <option>
-          Select Category
-        </option>
-        <option value="Fiction" onClick={(e) => setCategory(e.target.value)}>
-          Fiction
-        </option>
-        <option value="Non Fiction" onClick={(e) => setCategory(e.target.value)}>
-          Non Fiction
-        </option>
+      <select placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value="Uncategorized">Select Category</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Non Fiction">Non Fiction</option>
       </select>
 
       <button

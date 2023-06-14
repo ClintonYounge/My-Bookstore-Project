@@ -26,15 +26,18 @@ export default function BookContainer() {
 
   return (
     <section className="books">
-      {books.map((book) => (
-        <Books
-          key={book.itemId}
-          itemId={book.itemId}
-          title={book.title}
-          author={book.author}
-          category={book.category}
-        />
-      ))}
+      {Object.keys(books).map((bookId) => {
+        const book = books[bookId][0]; // Assuming each book ID has only one book object
+        return (
+          <Books
+            key={bookId}
+            itemId={bookId}
+            title={book.title}
+            author={book.author}
+            category={book.category}
+          />
+        );
+      })}
       <BookForm />
     </section>
   );
