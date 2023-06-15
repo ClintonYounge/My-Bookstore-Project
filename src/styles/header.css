@@ -26,7 +26,6 @@ nav {
 }
 
 .nav-links {
-  height: 5rem;
   display: flex;
   width: auto;
   justify-content: space-between;
@@ -47,7 +46,6 @@ nav {
   line-height: normal;
   letter-spacing: 1.9px;
   color: #121212;
-
 }
 
 .head {
