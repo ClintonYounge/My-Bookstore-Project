@@ -10,13 +10,13 @@ export default function Header() {
       <nav>
         <ul className="nav-links">
           <li className="head">Bookstore CMS</li>
-          <li className="route">
-            <Link to="/">Books</Link>
+          <li className="route1">
+            <Link to="/">BOOKS</Link>
           </li>
-          <li className="route">
-            <Link to="/categories">Categories</Link>
+          <li className="route2">
+            <Link to="/categories">CATEGORIES</Link>
           </li>
-          <li><img className="user-image" src={image} alt="" /></li>
+          <li className="image-li"><img className="user-image" src={image} alt="" /></li>
         </ul>
       </nav>
     </header>

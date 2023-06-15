@@ -21,7 +21,7 @@ export default function BookForm() {
     dispatch(addNewBook(newBook));
     setTimeout(() => {
       dispatch(fetchBooks());
-    }, 500);
+    }, 600);
 
     // Reset input fields after adding the book
     setTitle('');
@@ -31,33 +31,40 @@ export default function BookForm() {
 
   return (
     <div className="book-form">
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Author"
-        value={author}
-        onChange={(e) => setAuthor(e.target.value)}
-      />
-
-      <select placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="Uncategorized">Select Category</option>
-        <option value="Fiction">Fiction</option>
-        <option value="Non Fiction">Non Fiction</option>
-      </select>
-
-      <button
-        aria-label="add-btn"
-        type="button"
-        className="add-btn"
-        onClick={handleAddBook}
-      >
-        Add Book
-      </button>
+      <h1 className="add-new-book">ADD NEW BOOK</h1>
+      <div className="inputs">
+        <input
+          type="text"
+          placeholder="Book title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="book-name-input"
+        />
+        <input
+          type="text"
+          placeholder="Book author"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+          className="author-name-input"
+        />
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="category-selection"
+        >
+          <option value="Uncategorized" className="option">Select Category</option>
+          <option value="Fiction" className="option">Fiction</option>
+          <option value="Non Fiction" className="option">Non Fiction</option>
+        </select>
+        <button
+          aria-label="add-btn"
+          type="button"
+          className="add-btn"
+          onClick={handleAddBook}
+        >
+          ADD BOOK
+        </button>
+      </div>
     </div>
   );
 }
