@@ -70,7 +70,7 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: #0290ff;
 }
 
 .functionality {
@@ -88,7 +88,7 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: #0290ff;
   cursor: pointer;
 }
 
@@ -194,7 +194,7 @@ body {
 
 .up-progress {
   margin-top: 15px;
-  background-color: rgb(77, 77, 255);
+  background-color: #0290ff;
   padding: 10px;
   border-radius: 5px;
   font-family: 'Roboto Slab', serif;
@@ -297,5 +297,5 @@ input::placeholder {
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   margin: 1.188rem 0 0 2.125rem;
   border-radius: 3px;
-  background-color: rgb(77, 77, 255);
+  background-color: #0290ff;
 }

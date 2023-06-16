@@ -33,8 +33,7 @@ nav {
   height: auto;
 }
 
-.route1,
-.route2 {
+.route {
   width: 12.5%;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
@@ -59,5 +58,5 @@ nav {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: rgb(77, 77, 255);
+  color: #0290ff;
 }
