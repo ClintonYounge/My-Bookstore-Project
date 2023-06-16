@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import BookContainer from './components/BookContainer';
 import CategoriesPage from './components/CategoriesPage';
 import Header from './components/Header';
+import './styles/book.css';
 
 function App() {
   return (

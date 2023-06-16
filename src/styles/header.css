@@ -1,42 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
   list-style-type: none;
   text-decoration: none;
 }
 
+.image-li {
+  width: 50%;
+  text-align: end;
+}
+
 header {
   width: 100%;
+  margin: auto;
   border-bottom: 0.1px solid grey;
-  background-color: white;
   margin-bottom: 25px;
 }
 
 nav {
   width: 90%;
-  height: 100px;
-  display: flex;
   margin: auto;
-  align-items: center;
+  height: 5.5rem;
+  padding: 1.438rem 6.188rem 1.688rem 2.8rem;
+  background-color: var(--white-two);
 }
 
 .nav-links {
   display: flex;
-  width: 40%;
+  width: auto;
   justify-content: space-between;
   font-size: 20px;
-}
-
-.head {
-  font-size: 40px;
-  margin-left: -40px;
+  height: auto;
 }
 
 .route {
-  margin-top: 10px;
+  width: 12.5%;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
 }
 
-.user-image {
-  position: absolute;
-  right: 7.5%;
-  width: 20px;
-  margin-top: 8px;
+.head {
+  width: 25%;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }

@@ -25,7 +25,7 @@ export default function BookList({ books, onDelete }) {
       </li>
       <ul className="right-content">
         <li className="progress-stat">
-          Y%
+          X%
           <br />
           Completed
         </li>
