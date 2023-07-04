@@ -1,9 +1,16 @@
+<a name="readme-top"></a>
+
+<div align="center">
+  <h3><b>My Bookstore Project</b></h3>
+</div>
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
+  - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -22,7 +29,7 @@
 # 📖 [My Bookstore Project] <a name="about-project"></a>
 
 
-**[My Bookstore Project]** is a react.js project which allows users to add and remove books from a list by interacting.
+**My Bookstore Project** is a react.js project which allows users to add and remove books from a list by interacting.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -60,6 +67,10 @@
 - Add book to API functionality.
 - Remove book from API functionality.
 
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://bookstore-55py.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,7 +115,6 @@ Run the `npm install` command in your console to install all necessary dependenc
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--**[Styled User Interface]**
 -**[Better UX]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -125,7 +135,7 @@ If you like this project feel free to leave a star to show your support.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to give thanks to Microverse for equipping us will all the necessary information needed to complete this project. As well as for providing an environment that makes me strive to grow as a developer.
+I would like to give thanks to Microverse for providing an environment that makes me strive to grow as a developer.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
